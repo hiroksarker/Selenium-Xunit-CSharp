@@ -18,17 +18,6 @@ namespace SeleniumLearningApp.Test.Login
             SecureAreaPage secureAreaPage = loginPage.ClickLoginButton();
             Assert.True(secureAreaPage.GetAlertText().Contains("You logged into a secure area!"), "Alert text is incorrect.");
         }
-
-
-        [Fact]
-        public void SuccessfulLogins()
-        {
-            LoginPage loginPage = homePage.ClickFormAuthentication();
-            loginPage.SetUsername("tomsmith");
-            loginPage.SetPassword("SuperSecretPassword!");
-
-            SecureAreaPage secureAreaPage = loginPage.ClickLoginButton();
-            Assert.True(secureAreaPage.GetAlertText().Contains("You logged into a secure area!"), "Alert text is incorrect.");
-        }
+        
     }
 }
